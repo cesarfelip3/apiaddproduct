@@ -3,6 +3,8 @@
 if ($_POST) {
     $baseUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/';
     $restUrl = $baseUrl . 'restconnect/index/addProduct';
+    $redirectUrl = $baseUrl . 'checkout/cart';
+    
     $data = array(
         'apikey' => 'apikey',
         'apipassword' => 'password',
@@ -24,6 +26,6 @@ if ($_POST) {
     $result = curl_exec($ch);
     curl_close($ch);
     print_r(($result));
-    header('Location: ' . $baseUrl);
+    header('Location: ' . $redirectUrl);
 }
 ?>
