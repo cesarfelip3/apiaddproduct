@@ -37,7 +37,7 @@
                 <p>Demo Rest Api</p>
 
                 <form name="rest_add_product" action="" method="POST">
-                    <input type="submit" id="xadd-product" name="submit" value="Add Product"/>
+                    <input type="submit" id="add-product" name="submit" value="Add Product"/>
                 </form>
             </div>
         </div>
@@ -58,15 +58,16 @@
                                 productsku: 'product1',
                                 qty: 1
                             },
-                            dataType: 'jsonp',
+                            dataType: 'json',
                             success: function (data) {
                                 console.log(data);
-                                jQuery(location).attr('href', 'http://127.0.0.1/Magento/ussa/');
+                                jQuery(location).attr('href', baseUrl);
                             },
                             error: function (error) {
                                 console.log("Error:");
                                 console.log(error);
                                 alert("ERROR");
+                                //jQuery(location).attr('href', baseUrl);
                             }
                         });
                     });
