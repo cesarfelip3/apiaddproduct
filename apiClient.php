@@ -58,7 +58,7 @@
                                 productsku: 'product1',
                                 qty: 1
                             },
-                            dataType: 'json',
+                            dataType: 'jsonp',
                             success: function (data) {
                                 console.log(data);
                                 jQuery(location).attr('href', baseUrl);
@@ -67,7 +67,7 @@
                                 console.log("Error:");
                                 console.log(error);
                                 alert("ERROR");
-                                //jQuery(location).attr('href', baseUrl);
+                                jQuery(location).attr('href', baseUrl);
                             }
                         });
                     });
