@@ -1,4 +1,4 @@
-<?php include_once 'apiProcess.php'; ?>
+<?php //include_once 'apiProcess.php'; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -59,15 +59,19 @@
                 </div>
             </div>
         </div>
-        <!--        <div class="container">
-                    <div class="main" style="width:500px; margin:0 auto;">
-                        <p>Demo Rest Api</p>
         
-                        <form name="rest_add_product" action="" method="POST">
-                            <button type="submit" id="xadd-product" name="submit">Add Product</button>
-                        </form>
-                    </div>
-                </div>-->
+        <br/>
+        <hr/>
+        
+<!--        <div class="container">
+            <div class="main" style="width:500px; margin:0 auto;">
+                <p>Demo Rest Api</p>
+
+                <form name="rest_add_product" action="" method="POST">
+                    <button type="submit" id="xadd-product" name="submit">Add Product</button>
+                </form>
+            </div>
+        </div>-->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -91,7 +95,7 @@
                             data: {
                                 apikey: 'apikey',
                                 apipassword: 'password',
-                                productsku: $(this).data('productsku'),
+                                productsku: $this.data('productsku'),
                                 qty: 1
                             },
                             dataType: 'jsonp',
