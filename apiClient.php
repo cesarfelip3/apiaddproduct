@@ -48,6 +48,9 @@
                     jQuery('#add-product').on('click', function (e) {
                         e.preventDefault();
                         var baseUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/';
+                        
+                        var redirectUrl = baseUrl + 'checkout/cart';
+                        
                         alert(baseUrl + 'restconnect/index/addProduct');
                         jQuery.ajax({
                             url: baseUrl + 'restconnect/index/addProduct',
@@ -66,8 +69,8 @@
                             error: function (error) {
                                 console.log("Error:");
                                 console.log(error);
-                                alert("ERROR");
-                                jQuery(location).attr('href', baseUrl);
+                                //alert("ERROR");
+                                jQuery(location).attr('href', redirectUrl);
                             }
                         });
                     });
