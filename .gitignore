@@ -1,5 +1,5 @@
 /nbproject
 /vendor
-/composer.json
-/composer.lock
-/testGuzzle.php
+#/composer.json
+#/composer.lock
+#/testGuzzle.php
