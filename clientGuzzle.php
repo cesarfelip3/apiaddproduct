@@ -26,7 +26,55 @@
                         </a>
                         <form name="rest_add_product" action="serverGuzzle.php" method="POST">
                             <p><label>Product SKU : </label><input name="productsku" value="product1" readonly=""/></p>
-                            <p><label>Qty : </label><input name="productsku" value="1" readonly=""/></p>
+                            <p><label>Qty : </label><input name="qty" value="1" readonly=""/></p>
+                            <p>
+                                <button type="submit" id="xadd-product" name="submit">Add Product</button>
+                            </p>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <div class="product">
+                        <h2>Product 2</h2>
+                        <a href="#" class="thumbnail">
+                            <img data-src="holder.js/100%x180" alt="100%x180" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjU5LjU0Njg3NSIgeT0iOTAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTBwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xNzF4MTgwPC90ZXh0PjwvZz48L3N2Zz4=" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                        </a>
+                        <form name="rest_add_product2" action="serverGuzzle.php" method="POST">
+                            <p><label>Product SKU : </label><input name="productsku" value="product2" readonly=""/></p>
+                            <p><label>Qty : </label><input name="qty" value="1" readonly=""/></p>
+                            <p>
+                                <button type="submit" id="xadd-product" name="submit">Add Product</button>
+                            </p>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <div class="product">
+                        <h2>Product 3</h2>
+                        <a href="#" class="thumbnail">
+                            <img data-src="holder.js/100%x180" alt="100%x180" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjU5LjU0Njg3NSIgeT0iOTAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTBwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xNzF4MTgwPC90ZXh0PjwvZz48L3N2Zz4=" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                        </a>
+                        <form name="rest_add_product3" action="serverGuzzle.php" method="POST">
+                            <p><label>Product SKU : </label><input name="productsku" value="product3" readonly=""/></p>
+                            <p><label>Qty : </label><input name="qty" value="1" readonly=""/></p>
+                            <p>
+                                <button type="submit" id="xadd-product" name="submit">Add Product</button>
+                            </p>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <div class="product">
+                        <h2>Product 4</h2>
+                        <a href="#" class="thumbnail">
+                            <img data-src="holder.js/100%x180" alt="100%x180" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjU5LjU0Njg3NSIgeT0iOTAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTBwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xNzF4MTgwPC90ZXh0PjwvZz48L3N2Zz4=" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                        </a>
+                        <form name="rest_add_product4" action="serverGuzzle.php" method="POST">
+                            <p><label>Product SKU : </label><input name="productsku" value="product4" readonly=""/></p>
+                            <p><label>Qty : </label><input name="qty" value="1" readonly=""/></p>
                             <p>
                                 <button type="submit" id="xadd-product" name="submit">Add Product</button>
                             </p>
