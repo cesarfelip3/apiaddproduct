@@ -1,7 +1,4 @@
 <?php
-
-include_once('addProduct.php');
-
 include_once('vendor/autoload.php');
 
 use GuzzleHttp\Client;
