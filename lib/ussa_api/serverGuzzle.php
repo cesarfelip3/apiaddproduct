@@ -18,12 +18,13 @@
 
             jQuery.ajax({
                 url: baseUrl + 'restconnect/index/addProduct',
-                type: "POST",
                 data: data,
-                dataType: 'jsonp',
+                dataType: 'JSONP',
+                jsonpCallback: 'callback',
+                type: "POST",
                 success: function (data) {
                     console.log(data);
-                    jQuery(location).attr('href', baseUrl);
+                    jQuery(location).attr('href', redirectUrl);
                 },
                 error: function (error) {
                     console.log("Error:");
