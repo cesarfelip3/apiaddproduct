@@ -24,8 +24,9 @@
                 type: "POST",
                 success: function (data) {
                     console.log(data);
+                    //alert(data.product_sku);
                     //jQuery(location).attr('href', redirectUrl);
-                    addProduct(data.sku, 1);
+                    addProduct(data.product_sku, 1);
                 },
                 error: function (error) {
                     console.log("Error:");

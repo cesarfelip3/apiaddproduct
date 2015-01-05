@@ -32,7 +32,7 @@
 
                     </div>
                 </div>
-                <div class="col-xs-6 col-md-3">
+<!--                <div class="col-xs-6 col-md-3">
                     <div class="product">
                         <h2>Product 2</h2>
                         <a href="#" class="thumbnail">
@@ -45,7 +45,7 @@
                         </form>
 
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
