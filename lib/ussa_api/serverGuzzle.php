@@ -29,8 +29,8 @@
                 error: function (error) {
                     console.log("Error:");
                     console.log(error);
-                    //  alert("ERROR");
-                    jQuery(location).attr('href', redirectUrl);
+                    alert("ERROR");
+                    //jQuery(location).attr('href', redirectUrl);
                 }
             });
         });
