@@ -1,4 +1,4 @@
-<?php include_once './info.php'; ?>
+<?php include_once 'info.php'; ?>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">
@@ -26,9 +26,14 @@
                 type: "POST",
                 success: function (data) {
                     console.log(data);
-                    //alert(data.product_sku);
-                    //jQuery(location).attr('href', redirectUrl);
-                    addProduct(data.product_sku, 1);
+                    if (data.status == 'success') {
+                        //alert(data.product_sku);
+                        //jQuery(location).attr('href', redirectUrl);
+                        addProduct(data.product_sku, 1);
+                    }
+                    else {
+                        alert(data.message);
+                    }
                 },
                 error: function (error) {
                     console.log("Error:");
