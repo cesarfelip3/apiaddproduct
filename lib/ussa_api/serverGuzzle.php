@@ -1,11 +1,13 @@
+<?php include_once './info.php'; ?>
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">
     (function ($) {
         jQuery(document).ready(function () {
 
             var data = {
-                apikey: "<?php echo 'apikey' ?>",
-                apipassword: "<?php echo 'password' ?>",
+                apikey: "<?php echo $apikey ?>",
+                apipassword: "<?php echo $apipassword ?>",
                 product: '<?php echo json_encode($requestData) ?>'
             };
 
@@ -43,7 +45,7 @@
                     productsku: sku,
                     qty: qty
                 };
-                
+
                 var baseUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/';
                 //var baseUrl = 'http://127.0.0.1/Magento/ussa/index.php/';
 
