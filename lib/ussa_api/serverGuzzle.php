@@ -45,8 +45,8 @@
 
             function addProduct(sku, qty) {
                 var data = {
-                    apikey: "<?php echo 'apikey' ?>",
-                    apipassword: "<?php echo 'password' ?>",
+                    apikey: "<?php echo $apikey ?>",
+                    apipassword: "<?php echo $apipassword ?>",
                     productsku: sku,
                     qty: qty
                 };

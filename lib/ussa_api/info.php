@@ -1,3 +1,3 @@
 <?php
-$apikey = 'apikey';
-$apipassword = 'apipassword';
+$apikey = 'felipe_key';
+$apipassword = '123456';
