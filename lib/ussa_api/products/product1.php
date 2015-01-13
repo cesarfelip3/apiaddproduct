@@ -3,13 +3,13 @@
 $requestData['website_id'] = 1;
 $requestData['attribute_set_id'] = 4;
 $requestData['type_id'] = 'recurringproduct';
-$requestData['sku'] = 'recurring11';
+$requestData['sku'] = 'recurring111';
 $requestData['name'] = 'Test recurring product1';
 $requestData['weight'] = 1;
 $requestData['tax_class_id'] = 1;
 $requestData['price'] = '111';
-$requestData['description'] = 'description';
-$requestData['short_description'] = 'short description';
+$requestData['description'] = 'description description';
+$requestData['short_description'] = 'short description description';
 
 $requestData['tax_class_id'] = 1;
 $requestData['manage_stock'] = 1;
