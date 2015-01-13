@@ -90,7 +90,7 @@
                         var data = {
                             apikey: "<?php echo '' ?>",
                             apipassword: "<?php echo '' ?>",
-                            sku: "<?php echo 'recurring111' ?>"
+                            sku: "<?php echo 'recurring11' ?>"
                         };
                         var baseUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/';
                         //var baseUrl = 'http://127.0.0.1/Magento/ussa/index.php/';

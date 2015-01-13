@@ -28,6 +28,5 @@ if ($_POST) {
     $result = curl_exec($ch);
     curl_close($ch);
     print_r(($result));
-    header('Location: ' . $redirectUrl);
 }
 ?>
