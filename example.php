@@ -1,6 +1,11 @@
 <?php
 
 // Add product to cart
+/*curl http://dev.ussa.org/ecommerce/magento/index.php/restconnect/index/addProductToCart \
+   -d apikey=apikey \
+   -d apipassword=apipassword \
+   -d sku=product11 \
+   -d qty=1*/
 $baseUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/';
 $restUrl = $baseUrl . 'restconnect/index/addProductToCart';
 
@@ -11,7 +16,7 @@ $data = array(
     'qty' => 1
 );
 
-$data_string = json_encode($data);
+//$data_string = json_encode($data);
 
 $ch = curl_init($restUrl);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -26,8 +31,29 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 $result = curl_exec($ch);
 curl_close($ch);
 
+/**
+ Example response
+ {
+    "status":true,
+ }
+ OR
+ {
+    "status":false,
+    "error":302,
+    "error_description":"description of error"
+ }
+ 
+ */
+
 
 // Remove product from cart
+
+/*curl http://dev.ussa.org/ecommerce/magento/index.php/restconnect/index/deleteProductFromCart \
+   -d apikey=apikey \
+   -d apipassword=apipassword \
+   -d sku=product11 \
+ */
+
 $baseUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/';
 $restUrl = $baseUrl . 'restconnect/index/deleteProductFromCart';
 
@@ -37,7 +63,7 @@ $data = array(
     'sku' => 'product1'
 );
 
-$data_string = json_encode($data);
+//$data_string = json_encode($data);
 
 $ch = curl_init($restUrl);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -51,6 +77,20 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 
 $result = curl_exec($ch);
 curl_close($ch);
+
+/**
+ Example response
+ {
+    "status":true,
+ }
+ OR
+ {
+    "status":false,
+    "error":302,
+    "error_description":"description of error"
+ }
+ 
+ */
 
 
 //Add / Update product
