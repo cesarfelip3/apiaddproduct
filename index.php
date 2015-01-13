@@ -96,7 +96,7 @@
                         //var baseUrl = 'http://127.0.0.1/Magento/ussa/index.php/';
 
                         jQuery.ajax({
-                            url: baseUrl + 'restconnect/index/deleteProductFromCart',
+                            url: baseUrl + 'restconnect/index/addProductToCart',
                             data: data,
                             dataType: 'JSONP',
                             jsonpCallback: 'callback',
