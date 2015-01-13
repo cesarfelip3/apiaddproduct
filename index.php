@@ -1,4 +1,4 @@
-<?php //include_once 'apiProcess.php';          ?>
+<?php //include_once 'apiProcess.php';             ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -46,7 +46,7 @@
 
                     </div>
                 </div>
-                
+
                 <div class="col-xs-6 col-md-3">
                     <div class="product">
                         <h2>Remove Product from Cart</h2>
@@ -62,7 +62,7 @@
 
                     </div>
                 </div>
-                
+
                 <div class="col-xs-6 col-md-3">
                     <div class="product">
                         <h2>Simple Product</h2>
@@ -92,8 +92,8 @@
                             apipassword: "<?php echo '' ?>",
                             sku: "<?php echo 'recurring111' ?>"
                         };
-
-                        var baseUrl = 'http://127.0.0.1/Magento/ussa/index.php/';
+                        var baseUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/';
+                        //var baseUrl = 'http://127.0.0.1/Magento/ussa/index.php/';
 
                         jQuery.ajax({
                             url: baseUrl + 'restconnect/index/deleteProductFromCart',
@@ -103,6 +103,7 @@
                             type: "POST",
                             success: function (data) {
                                 console.log(data);
+                                jQuery(location).attr('href', baseUrl + 'checkout/cart');
                             },
                             error: function (error) {
                                 console.log("Error:");
@@ -111,7 +112,7 @@
                             }
                         });
                     });
-                    
+
                     $('#remove-product').on('click', function (e) {
                         e.preventDefault();
                         var data = {
@@ -120,7 +121,8 @@
                             sku: $('input[name=remove_qty]').val()
                         };
 
-                        var baseUrl = 'http://127.0.0.1/Magento/ussa/index.php/';
+                        var baseUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/';
+                        //var baseUrl = 'http://127.0.0.1/Magento/ussa/index.php/';
 
                         jQuery.ajax({
                             url: baseUrl + 'restconnect/index/deleteProductFromCart',
@@ -130,6 +132,7 @@
                             type: "POST",
                             success: function (data) {
                                 console.log(data);
+                                jQuery(location).attr('href', baseUrl + 'checkout/cart');
                             },
                             error: function (error) {
                                 console.log("Error:");

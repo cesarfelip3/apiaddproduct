@@ -12,7 +12,7 @@
             };
 
             var baseUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/';
-            var baseUrl = 'http://127.0.0.1/Magento/ussa/index.php/';
+            //var baseUrl = 'http://127.0.0.1/Magento/ussa/index.php/';
 
             var redirectUrl = baseUrl + 'checkout/cart';
 
@@ -28,6 +28,7 @@
                     console.log(data);
                     if (data.status == 'success') {
                         //alert(data.product_sku);
+                        alert('Prodcut added/updated');
                         //jQuery(location).attr('href', redirectUrl);
                         //addProduct(data.product_sku, 1);
                     }
