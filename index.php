@@ -1,4 +1,4 @@
-<?php //include_once 'apiProcess.php';             ?>
+<?php //include_once 'apiProcess.php';               ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -90,13 +90,16 @@
                         var data = {
                             apikey: "<?php echo '' ?>",
                             apipassword: "<?php echo '' ?>",
-                            sku: "<?php echo 'recurring11' ?>"
+                            sku: "<?php echo 'recurring11' ?>",
+                            method: 'addProductToCart'
                         };
                         var baseUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/';
-                        //var baseUrl = 'http://127.0.0.1/Magento/ussa/index.php/';
+                        var baseUrl = 'http://127.0.0.1/Magento/ussa/index.php/';
+                        
+                        var restUrl = baseUrl + 'restconnect/index/ussa';
 
                         jQuery.ajax({
-                            url: baseUrl + 'restconnect/index/addProductToCart',
+                            url: restUrl,
                             data: data,
                             dataType: 'JSONP',
                             jsonpCallback: 'callback',
@@ -118,14 +121,16 @@
                         var data = {
                             apikey: "<?php echo '' ?>",
                             apipassword: "<?php echo '' ?>",
-                            sku: $('input[name=remove_qty]').val()
+                            sku: $('input[name=remove_qty]').val(),
+                            method: 'deleteProductFromCart'
                         };
 
                         var baseUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/';
-                        //var baseUrl = 'http://127.0.0.1/Magento/ussa/index.php/';
+                        var baseUrl = 'http://127.0.0.1/Magento/ussa/index.php/';
+                        var restUrl = baseUrl + 'restconnect/index/ussa';
 
                         jQuery.ajax({
-                            url: baseUrl + 'restconnect/index/deleteProductFromCart',
+                            url: restUrl,
                             data: data,
                             dataType: 'JSONP',
                             jsonpCallback: 'callback',
