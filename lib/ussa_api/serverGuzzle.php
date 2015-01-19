@@ -13,11 +13,9 @@
             };
 
             var baseUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/';
-            var baseUrl = 'http://127.0.0.1/Magento/ussa/index.php/';
+            //var baseUrl = 'http://127.0.0.1/Magento/ussa/index.php/';
             
             var restUrl = baseUrl + 'restconnect/index/ussa';
-
-            var redirectUrl = baseUrl + 'checkout/cart';
 
             jQuery.ajax({
                 url: restUrl,
