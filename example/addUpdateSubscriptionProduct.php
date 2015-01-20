@@ -37,10 +37,10 @@ curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 curl_setopt($ch, CURLOPT_POSTFIELDS, $request);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 //curl_setopt($ch, CURLOPT_HEADER, TRUE);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-    'Content-Type: application/jsonp',
-    'Content-Length: ' . strlen(json_encode($request))
-);
+//curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+//    'Content-Type: application/jsonp',
+//    'Content-Length: ' . strlen(json_encode($request))
+//));
 
 $result = curl_exec($ch);
 print_r($result);
