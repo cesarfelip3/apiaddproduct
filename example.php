@@ -12,7 +12,7 @@ $restUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/restconnect/index/us
 $data = array(
     'apikey' => 'apikey',
     'apipassword' => 'password',
-    'sku' => 'product1',
+    'sku' => 'recurring11',
     'qty' => 1,
     'method'=> 'addProductToCart'
 );
@@ -61,7 +61,7 @@ $restUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/restconnect/index/us
 $data = array(
     'apikey' => 'apikey',
     'apipassword' => 'password',
-    'sku' => 'product1',
+    'sku' => 'recurring11',
     'method' => 'deleteProductFromCart'
 );
 
