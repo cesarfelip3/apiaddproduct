@@ -34,5 +34,7 @@ if($obj->error == 601) {
     echo "Error of customer";
     echo $obj->error_description;
 }
-
+else {
+    echo "Customer is present";
+}
 curl_close($ch);
