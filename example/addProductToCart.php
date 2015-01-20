@@ -11,7 +11,7 @@ $restUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/restconnect/index/us
 $restUrl = 'http://127.0.0.1/Magento/ussa/index.php/restconnect/index/ussa';
 
 $data = array(
-    'email' => 'itmyprofession@gmail.com',
+    'email' => 'adfasdfitmyprofession@gmail.com',
     'sku' => 'recurring11',
     'qty' => 1,
     'method'=> 'addProductToCart'
@@ -29,6 +29,10 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 $result = curl_exec($ch);
 
-print_r($result);
+$obj = json_decode($result);
+if($obj->error == 601) {
+    echo "Error of customer";
+    echo $obj->error_description;
+}
 
 curl_close($ch);
