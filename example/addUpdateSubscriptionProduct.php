@@ -2,7 +2,6 @@
 
 //Add / Update product
 $restUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/restconnect/index/ussa';
-$restUrl = 'http://127.0.0.1/Magento/ussa/index.php/restconnect/index/ussa';
 
 $requestData['website_id'] = 1;
 $requestData['attribute_set_id'] = 4;
