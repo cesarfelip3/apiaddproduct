@@ -8,20 +8,19 @@
    -d qty=1 \
    -d method=addProductToCart*/
 $restUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/restconnect/index/ussa';
+$restUrl = 'http://127.0.0.1/Magento/ussa/index.php/restconnect/index/ussa';
 
 $data = array(
-    'apikey' => 'apikey',
-    'apipassword' => 'password',
+    'email' => 'itmyprofession@gmail.com',
+    'password' => 'admin11',
     'sku' => 'recurring11',
     'qty' => 1,
     'method'=> 'addProductToCart'
 );
 
-//$data_string = json_encode($data);
-
 $ch = curl_init($restUrl);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 //curl_setopt($ch, CURLOPT_HEADER, TRUE);
 //curl_setopt($ch, CURLOPT_HTTPHEADER, array(
