@@ -24,18 +24,18 @@ $requestData['category_id'] = 3;
 $requestData['subscription_unit'] = 1; //1->Daily,2->Weekly,3->monthly,4->quaterly,5->Twice a yer,6->yearly
 $requestData['total_occurences'] = 5;
 
-$data = array(
+$request = array(
     'apikey' => 'apikey',
     'apipassword' => 'password',
     'product' => json_encode($requestData),
     'method' => 'addUpdateSubscriptionProduct'
 );
 
-//$data_string = json_encode($data);
+$data_string = json_encode($request);
 
 $ch = curl_init($restUrl);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $request);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 //curl_setopt($ch, CURLOPT_HEADER, TRUE);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
