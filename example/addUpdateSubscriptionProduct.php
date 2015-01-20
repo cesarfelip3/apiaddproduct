@@ -2,6 +2,7 @@
 
 //Add / Update product
 $restUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/restconnect/index/ussa';
+$restUrl = 'http://127.0.0.1/Magento/ussa/index.php/restconnect/index/ussa';
 
 $requestData['website_id'] = 1;
 $requestData['attribute_set_id'] = 4;
@@ -31,8 +32,6 @@ $request = array(
     'method' => 'addUpdateSubscriptionProduct'
 );
 
-$data_string = json_encode($request);
-
 $ch = curl_init($restUrl);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 curl_setopt($ch, CURLOPT_POSTFIELDS, $request);
@@ -40,7 +39,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 //curl_setopt($ch, CURLOPT_HEADER, TRUE);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Content-Type: application/jsonp',
-    'Content-Length: ' . strlen($data_string))
+    'Content-Length: ' . strlen(json_encode($request))
 );
 
 $result = curl_exec($ch);
