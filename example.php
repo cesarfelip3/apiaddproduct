@@ -1,19 +1,20 @@
 <?php
 
 // Add product to cart
-/*curl http://dev.ussa.org/ecommerce/magento/index.php/restconnect/index/addProductToCart \
+/*curl http://dev.ussa.org/ecommerce/magento/index.php/restconnect/index/ussa \
    -d apikey=apikey \
    -d apipassword=apipassword \
    -d sku=product11 \
-   -d qty=1*/
-$baseUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/';
-$restUrl = $baseUrl . 'restconnect/index/addProductToCart';
+   -d qty=1 \
+   -d method= 'addProductToCart'*/
+$restUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/restconnect/index/ussa';
 
 $data = array(
     'apikey' => 'apikey',
     'apipassword' => 'password',
     'sku' => 'product1',
-    'qty' => 1
+    'qty' => 1,
+    'method'=> 'addProductToCart'
 );
 
 //$data_string = json_encode($data);
@@ -48,19 +49,20 @@ curl_close($ch);
 
 // Remove product from cart
 
-/*curl http://dev.ussa.org/ecommerce/magento/index.php/restconnect/index/deleteProductFromCart \
+/*curl http://dev.ussa.org/ecommerce/magento/index.php/restconnect/index/ussa \
    -d apikey=apikey \
    -d apipassword=apipassword \
    -d sku=product11 \
+   -d method=deleteProductFromCart \
  */
 
-$baseUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/';
-$restUrl = $baseUrl . 'restconnect/index/deleteProductFromCart';
+$restUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/restconnect/index/ussa';
 
 $data = array(
     'apikey' => 'apikey',
     'apipassword' => 'password',
-    'sku' => 'product1'
+    'sku' => 'product1',
+    'method' => 'deleteProductFromCart'
 );
 
 //$data_string = json_encode($data);
@@ -94,9 +96,7 @@ curl_close($ch);
 
 
 //Add / Update product
-
-$baseUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/';
-$restUrl = $baseUrl . 'restconnect/index/addUpdateSubscriptionProduc';
+$restUrl='http://dev.ussa.org/ecommerce/magento/index.php/restconnect/index/ussa';
 
 $requestData['website_id'] = 1;
 $requestData['attribute_set_id'] = 4;
@@ -122,10 +122,11 @@ $requestData['total_occurences'] = 5;
 $data = array(
     'apikey' => 'apikey',
     'apipassword' => 'password',
-    'product' => $requestData
+    'product' => $requestData,
+    'method'=>'addUpdateSubscriptionProduct'
 );
 
-$data_string = json_encode($data);
+//$data_string = json_encode($data);
 
 $ch = curl_init($restUrl);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
