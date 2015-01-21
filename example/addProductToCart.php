@@ -2,8 +2,7 @@
 
 // Add product to cart
 /*curl http://dev.ussa.org/ecommerce/magento/index.php/restconnect/index/ussa \
-   -d apikey=apikey \
-   -d apipassword=apipassword \
+   -d email=example@gmail.com \
    -d sku=product11 \
    -d qty=1 \
    -d method=addProductToCart*/
@@ -11,7 +10,7 @@ $restUrl = 'http://dev.ussa.org/ecommerce/magento/index.php/restconnect/index/us
 $restUrl = 'http://127.0.0.1/Magento/ussa/index.php/restconnect/index/ussa';
 
 $data = array(
-    'email' => 'adfasdfitmyprofession@gmail.com',
+    'email' => 'example@gmail.com',
     'sku' => 'recurring11',
     'qty' => 1,
     'method'=> 'addProductToCart'
